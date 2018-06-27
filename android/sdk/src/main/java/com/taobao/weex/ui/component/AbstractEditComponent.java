@@ -49,7 +49,6 @@ import com.taobao.weex.dom.CSSConstants;
 import com.taobao.weex.dom.WXStyle;
 import com.taobao.weex.layout.ContentBoxMeasurement;
 import com.taobao.weex.layout.MeasureMode;
-import com.taobao.weex.layout.MeasureSize;
 import com.taobao.weex.ui.action.BasicComponentData;
 import com.taobao.weex.ui.component.helper.SoftKeyboardDetector;
 import com.taobao.weex.ui.component.helper.WXTimeInputHelper;
@@ -549,7 +548,7 @@ public abstract class AbstractEditComponent extends WXComponent<WXEditText> {
       return;
     }
     mType = type;
-    ((EditText) getHostView()).setRawInputType(getInputType(mType));
+    ((EditText) getHostView()).setInputType(getInputType(mType));
     switch (mType) {
       case Constants.Value.DATE:
       case Constants.Value.TIME:
